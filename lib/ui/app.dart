@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         accentColor: accentColor,
         appBarTheme: AppBarTheme(
           textTheme: Theme.of(context).textTheme.copyWith(
-            headline6: Theme.of(context).textTheme.headline6.copyWith(
+            headline6: Theme.of(context).textTheme.headline6!.copyWith(
               color: accentColor,
               fontSize: 24
             )

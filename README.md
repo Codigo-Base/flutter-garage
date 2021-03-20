@@ -1,6 +1,6 @@
 # flutter_garage
 
-Flutter application to record Flutter Garage videos
+Flutter application to record Flutter Garage videos. See https://www.youtube.com/channel/UCUS32RRqVl6gqTXqMFoCrjA
 
 ## Getting Started
 
