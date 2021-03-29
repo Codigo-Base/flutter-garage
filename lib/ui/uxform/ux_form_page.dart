@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_garage/ui/hidekeyboard/hide_keyboard_wrap.dart';
+import 'package:flutter_garage/ui/widget/hide_keyboard_wrap.dart';
 
 class UxFormPage extends StatelessWidget {
   @override
