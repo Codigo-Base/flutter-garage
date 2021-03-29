@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_garage/ui/hidekeyboard/hide_keyboard_page.dart';
+import 'package:flutter_garage/ui/uxform/ux_form_page.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -27,12 +28,12 @@ class MyApp extends StatelessWidget {
           contentPadding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
           hintStyle: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.w400, fontSize: 14),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(15),
           ),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HideKeyboardPage(),
+      home: UxFormPage(),
     );
   }
 }
