@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_garage/ui/hidekeyboard/hide_keyboard_page.dart';
+import 'package:flutter_garage/ui/null-safety/null_safety_page.dart';
 import 'package:flutter_garage/ui/uxform/ux_form_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: UxFormPage(),
+      home: NullSafetyPage(),
     );
   }
 }
