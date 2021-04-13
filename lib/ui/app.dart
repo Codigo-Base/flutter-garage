@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_garage/ui/apperror/app_error_page.dart';
 import 'package:flutter_garage/ui/hidekeyboard/hide_keyboard_page.dart';
 import 'package:flutter_garage/ui/uxform/ux_form_page.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: UxFormPage(),
+      home: AppErrorPage(),
     );
   }
 }
