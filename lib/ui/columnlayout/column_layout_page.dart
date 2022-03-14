@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_garage/ui/widget/rounded_button.dart';
 
-class ColumnLayout extends StatelessWidget {
-  const ColumnLayout({Key? key}) : super(key: key);
+class ColumnLayoutPage extends StatelessWidget {
+  const ColumnLayoutPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

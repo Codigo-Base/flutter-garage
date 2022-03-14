@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_garage/l10n/generated/l10n.dart';
 import 'package:flutter_garage/ui/apperror/app_error_page.dart';
-import 'package:flutter_garage/ui/columnlayout/column_layout.dart';
+import 'package:flutter_garage/ui/columnlayout/column_layout_page.dart';
+import 'package:flutter_garage/ui/gestures/gestures_page.dart';
 import 'package:flutter_garage/ui/hidekeyboard/hide_keyboard_page.dart';
 import 'package:flutter_garage/ui/intl/intl_page.dart';
 import 'package:flutter_garage/ui/uxform/ux_form_page.dart';
@@ -13,33 +14,28 @@ class MyApp extends StatelessWidget {
     final primaryColor = Color(0xFF181D45);
     final accentColor = Color(0xFFB13CDD);
 
+    final theme = Theme.of(context);
+    final baseTextStyle = theme.textTheme;
+    final textStyle = baseTextStyle
+        .copyWith(headline6: baseTextStyle.headline6?.copyWith(fontSize: 26))
+        .apply(
+          bodyColor: accentColor,
+          displayColor: accentColor,
+        );
+
     return MaterialApp(
       title: 'Flutter Garage',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: primaryColor,
-        accentColor: accentColor,
         colorScheme: ColorScheme.fromSwatch(
           accentColor: accentColor,
         ),
         appBarTheme: AppBarTheme(
-            backgroundColor: primaryColor,
-            toolbarTextStyle: Theme.of(context)
-                .textTheme
-                .copyWith(
-                    headline6: Theme.of(context)
-                        .textTheme
-                        .headline6!
-                        .copyWith(color: accentColor, fontSize: 24))
-                .bodyText2,
-            titleTextStyle: Theme.of(context)
-                .textTheme
-                .copyWith(
-                    headline6: Theme.of(context)
-                        .textTheme
-                        .headline6!
-                        .copyWith(color: accentColor, fontSize: 24))
-                .headline6),
+          backgroundColor: primaryColor,
+          toolbarTextStyle: textStyle.headline6,
+          titleTextStyle: textStyle.headline6,
+        ),
         inputDecorationTheme: InputDecorationTheme(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
@@ -60,7 +56,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: ColumnLayout(),
+      home: GesturesPage(),
     );
   }
 }
